@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background: #333;
+            font-family: system-ui, sans-serif;
+            color: white;
+            padding: 10px;
+        }
+        a{
+            display: none;
+            color: white;
+            text-decoration: none;
+            text-align: left;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            flex: 1;            
+        }
+        .posts{
+            background: #eee;
+            flex: 1 1 100%;
+        }
+        .card{
+            background: #eee;
+        }
+        .thumb{
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+
+        }
+        .content{
+            background: white;
+            padding: 10px;            
+        }
+        .title{
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .meta{
+            color: grey;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h3>My blog</h3>
+        <nav>
+            <ul>
+                <a href="#">홈</a>
+                <a href="#">카테고리</a>
+                <a href="#">태그</a>
+                <a href="#">정보</a>
+            </ul>
+        </nav>
+
+    </header>
+
+
+    <main>
+        <section class="posts">
+            <article class="card">
+                <img class="thumb" src="https://fastly.picsum.photos/id/11/800/450.jpg?hmac=yqmIRoEb__n63osRXrz0m7kKQ6F4SfM1iNs3ZF6uoVs" alt="">        
+                <div class="content">
+                    <h3 class="title">포스트 제목 1</h3>
+                    <p class="meta">2025-11-04 · 카테고리</p>
+                    <p>간단한 소개 문장이다. 간단한 소개 문장이다. 간단한 소개 문장이다.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img class="thumb" src="https://fastly.picsum.photos/id/989/800/450.jpg?hmac=DFQaP_Pz7DJ7oabxDnvqifJYCD9u8CleboU88Q7LCBk" alt="">        
+                <div class="content">
+                    <h3 class="title">포스트 제목 2</h3>
+                    <p class="meta">2025-11-04 · 카테고리</p>
+                    <p>간단한 소개 문장이다. 간단한 소개 문장이다. 간단한 소개 문장이다.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img class="thumb" src="https://fastly.picsum.photos/id/845/800/450.jpg?hmac=Xar8KEurLuaibWQu2Rlg-8Mmg9S29FECsGKwTNpPgJM" alt="">        
+                <div class="content">
+                    <h3 class="title">포스트 제목 3</h3>
+                    <p class="meta">2025-11-04 · 카테고리</p>
+                    <p>간단한 소개 문장이다. 간단한 소개 문장이다. 간단한 소개 문장이다.</p>
+                </div>
+            </article>
+        </section>
+
+
+        <aside>
+            <h4>사이드바</h4>            
+            <ul>
+                <li>인기 글</li>
+                <li>최근 댓글</li>
+                <li>카테고리</li>
+            </ul>
+
+        </aside>
+
+    </main>
+
+
+    <footer>
+        <small>© 2025 My Blog. All rights reserved.</small>
+
+    </footer>
+
+
+    
+</body>
+</html>

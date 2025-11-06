@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <style>
+        header{
+            display: flex;
+            flex-direction: row;
+            color: white;
+            background: #333;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            
+        }
+        a:hover{
+            background: rgba(255, 255, 255, 0.12);
+            color: #e0e7ff;
+        }
+        .nav-list{
+            display: flex;
+            list-style: none;
+            gap: 16px;
+        }
+        .welcome{
+            margin: 25px;
+            padding: 10px;
+            flex-direction: row;
+        }
+        .w-title{
+            font-family: system-ui, sans-serif;
+            font-weight: bold;
+        }
+    
+        span{
+            font-weight: bold;
+        }
+        .welcome__media{
+            width: 500px;
+            height: 300px;
+        }
+        .container{
+            margin: 25px;
+            padding: 10px;
+            background: white;
+            border-radius: 12px;
+        }
+        .container:hover{
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        }
+        .menu{
+            object-fit: fill;
+            flex-wrap: wrap;
+        }
+        .c-text{
+            color: #cfcfcfd0;
+        }
+        .card{
+            font-weight: bold;
+        }
+        .c-img{
+            width: 100px;
+            height: 50px;
+        }
+        footer{
+            background: #f3f4f6;
+            font-size: 12px;
+        }
+        .sns{
+            color:#2c3e50
+        }
+        .Location{
+            gap: 20px;
+        }
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1>Cafe Mocha</h1>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">홈</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+        </nav>        
+    </header>
+    <main>
+        <section class="welcome">
+            <div>
+                <h2>Welcome</h2>
+                <div>
+                    <p>향긋한 커피와 여유를 즐길 수 있는 <span>카페 모카</span>다</p>
+                    <p>분위기 좋은 음악과 함께한 휴식, 진한 향의 음료로 당신의 하루를 더 행복하게 만들어드린다</p>
+                </div>
+            </div>
+            <figure class="welcome__media">
+                <img src="https://picsum.photos/800/450?1" alt="따뜻한 조명과 원목 테이블이 있는 카페 내부 전경" width="350">
+            </figure>
+            
+            
+
+        </section>
+        <section class="menu">
+            <h2>Menu</h2>
+            <div class="container">
+                <img calss="c-img" src="https://picsum.photos/800/450?5" alt="아메리카노" width="200">
+                <div class="card">
+                    <p>아메리카노</p>
+                    <p>3,500</p>
+                    <p class="c-text">묵직한 바디감과 깔끔한 피니시다</p>
+                </div>
+
+            </div>
+            <div class="container">
+                <img calss="c-img" src="https://picsum.photos/800/450?4" alt="카페라떼" width="200">
+                <div class="card">
+                    <p>카페라떼</p>
+                    <p>4,500</p>
+                    <p class="c-text">부드러운 우유와 에스프레소의 조화다</p>
+                </div>
+
+            </div>
+            <div class="container">
+                <img calss="c-img" src="https://picsum.photos/800/450?2" alt="카푸치노" width="200">
+                <div class="card">
+                    <p>카푸치노</p>
+                    <p>4,800</p>
+                    <p class="c-text">풍성한 폼과 진한 에스프레소 향이다</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="Location">
+            <div class="atn">
+                <h2>Location</h2>
+                <p>서울특별시 강남구 카페로 123, 1층</p>
+                <p>영업시간: 매일 10:00 ~ 22:00</p>
+                <p>전화 문의: 02-123-4567</p>
+                <p>메일: hello@cafemocha.co.kr</p>
+            </div>
+            <img src="https://picsum.photos/800/450?8" width="500">
+        </section>
+
+
+    </main>
+    <footer>
+        <p>&copy 2025 Cafe Mocha</p>
+        <div>
+            <a class="sns" href="#">Instagram</a>
+            <a class="sns" href="#">Facebook</a>
+        </div>
+    </footer>
+
+
+
+
+    
+</body>
+</html>

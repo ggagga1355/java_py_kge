@@ -1,0 +1,117 @@
+var : 변수를 재선언해도 에러 발생하지 않음.
+let : 변수를 재선언하면 에러발생.
+const 
+
+초기화
+변수에 값을 할당
+
+변수명 = 값;
+
+a = 100;
+
+논리연산자는 참과 거짓으로만 연산
+
+&& : and
+T&&T -> T
+앞이 참이고 뒤가 참이면 결과가 참
+T&&F -> F
+F&&t -> F
+f&&f -> F
+
+|| : or 앞,뒤 중 최소 하나라도 참이면 결과가 참
+T||T -> T
+T||T -> T
+F||T -> T
+T||T -> F
+
+not 연산자
+참 -> 거짓
+거짓 -> 참
+!T_> F
+!F-> T
+참과 거짓으로 연산 (중요)
+
+let x = 10;
+
+x>5 && x<20 -> x값이 5보다 크고 20보다 작다
+
+null병합연산자
+let result = 값1 ?? 값2;
+값1이 null이거나 undefined일 때 값2를 반환
+
+조건식
+결과가 참이나 거짓으로 나오는 식
+비교연산자
+논리연산자
+
+제어문(control statement)
+코드의 흐름이 위에서 아래로 진행이 된다.
+
+if문 (조건문){
+
+}
+
+삼항연사자와 같은 기능을 하는 if - else
+
+여러개의 조건을 비교해야 할 때 중첩삼항연산자
+if- else if - else
+
+let score = 55;
+
+        if (score >= 90) {
+            console.log("A");
+        } else if (score >= 80) {
+            console.log("B");
+        } else if (score >= 70) {
+            console.log("C");
+        } else if (score >= 60) {
+            console.log("D");
+        } else {
+            console.log("F");
+        }
+
+
+
+스위치문
+switch() {
+            case 1: console.log(""); break;
+            case 2: console.log(""); break;
+            case 3: console.log(""); break;
+	case 4:
+	case 5:
+	     console.log(""); break;
+            default : console.log("잘못된 선택입니다.")
+        }
+
+
+그날 공부했던거 중 모르는걸 정리 후
+검색 & gpt질의를 통해 정리 후 모르면 질문
+
+블로그(티스토리), 노션, 메모장 등등 메체에 문서로 남겨놓기
+
+수업끝나고 집에서 복습한 후 작성한 문서를
+매일 카톡으로 보내기
+
+github
+코드를 올리는 블로그
+
+git을 우선적으로 깔아야함
+git : 버전을 관리해주는 도구
+우리 컴퓨터 작업한 내용
+commit 이라는 명령어를 통해 버전을 기록
+
+레파지토리(repository) -> 코드들을 저장하는 폴더
+add ->커밋하기전에 내가 작업한 내용을임시공간에 올리는 명령어
+commit -> 내가 지금까지 작업한 내용을 버전으로 만들어서 저장
+여기까지는 내 컴퓨터 내부에서 하는 작업
+push -> 커밋된 내용을 github로 올려주세요
+clone : github에 있는 특정 폴더를 내 컴퓨터에 복사하겠다
+ㄴ레파지토리를 고르고 ->내 컴퓨터 어디에 저장할지 경로 결정 ->clone
+
+
+
+
+
+
+
+

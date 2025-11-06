@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+        .profile{
+            border: 2px solid #eee;
+            border-radius: 12px;
+            background: white;
+            margin: 10px;
+            padding: 15px;
+        }
+        .profile--vip{
+            background: gold;
+            font-weight: bold;
+            border: 2px solid orange;
+        }
+        .profile__name{
+            font-size: 20px;
+            font-weight: 200p;
+        }
+        .profile__email{
+            color: #8f8f8fce;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+    <h1>BEM 프로필 예제</h1>
+    <div class="profile">
+        <div class="profile__name">이름: 홍길동</div>
+        <div class="profile__email">이메일: gildong@example.com</div>
+    </div>
+
+    <div class="profile profile--vip">
+        <div class="profile__name">이름: 김철수</div>
+        <div class="profile__email">이메일: chulsoo@example.com</div>
+    </div>
+
+</body>
+</html>

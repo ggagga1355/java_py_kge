@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{
+            color: blue;
+        }
+        a:visited{
+            color: violet;
+        }
+        a:hover{
+            color: orange;
+        }
+
+        input:checked + label{
+            color: green;
+            font-weight: 600;
+        }
+
+        li:first-child{
+            font-weight: 700;
+
+        }
+        li:nth-child(3){
+            color: red;
+        }
+
+        p:not(.notice){
+            color: gray;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <h2>간단 실습</h2>
+    <div>
+        <h3>1) 링크 상태</h3>
+        <a href="#">예시 링크</a>
+    </div>
+    
+    <div>
+        <h3>2)체크박스 + label</h3>
+        <input type="checkbox" id="agree">
+        <label for="agree">약관에 동의합니다</label>
+    </div>
+    
+    <div>
+        <h3>3)리스트 선택</h3>
+        <ul>
+            <li>첫 번째 항목</li>
+            <li>두 번째 항목</li>
+            <li>세 번째 항목</li>
+        </ul>
+    </div>
+    
+    <div>
+        <h3>4)문단 색상</h3>
+        <p class="gray">이 문단은 회색이다</p>
+        <p class="notice">이 문단은 .notice라서 기본 색상이다</p>
+    </div>
+    
+    
+</body>
+</html>

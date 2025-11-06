@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            background: #ccc;
+        }
+        header{
+            margin: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ccc;
+        }
+        a{
+            color: blue;
+            text-decoration: none;
+        }
+        .container{
+            width: 100%;
+            max-width: 1200px;
+            border: 1px solid black;
+            border-radius: 24px;
+            background: white;
+            padding-bottom: 20px;
+        }
+        .link{
+           text-decoration: none; 
+        }
+        section{
+            padding: 20px;
+            margin: 15px;
+            display: flex;
+            border-bottom : 1px solid #ccc;
+        }
+        .card{
+            width: 300px ;
+            height: 200px auto;
+            border: 1px solid #22222248;
+            border-radius: 10px;
+            padding: 25px;
+            
+        }
+        .image{
+            width: 120px;
+            height: 120px;
+            place-items: center;
+        }
+        .button{
+            width: 95px;
+            height: 35px;
+            color: white;
+            background-color: rgba(47, 135, 229, 0.918);
+            border-radius: 10px;
+        }
+        .copy{
+            font-size: 15px;
+            color: #899fa1db;
+           
+        }
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+        <!-- 스토어, 홈, 상품, 문의 -->
+        <h1>스토어</h1>
+        <a href="#">홈</a>
+        <a href="#">상품</a>
+        <a href="#">문의</a>
+    </header>
+
+    <main>
+        <!-- 상품 목록 -->
+         <h2>상품 목록</h2>  
+        <section>          
+            <div class="card">
+                <img class="image" src="../images/key.png" alt="무선 키보드 이미지">
+                <p>무선 키보드</p>
+                <p>저소음 키감과 편리한 연결을 지원한다.</p>
+                <button class="button">자세히 보기</button>
+            </div>
+        
+            <div class="card">
+                <img class="image" src="../images/mouse.png" alt="인체공학 마우스 이미지">
+                <p>인체공학 마우스</p>
+                <p>손목 부담을 줄이는 인체공학 디자인이다.</p>
+                <button class="button">자세히 보기</button>
+            </div>
+            
+            <div class="card">
+                <img class="image" src="../images/note.png" alt="노트북 거치대 이미지">
+                <p>노트북 거치대</p>
+                <p>높이 조절로 자세를 개선하고 발열을 줄인다.</p>
+                <button class="button">자세히 보기</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="copy">&copy; 2025MyStore. 모든 권리 보유.</div>
+
+
+    </footer>
+    </div>
+    
+    
+</body>
+</html>

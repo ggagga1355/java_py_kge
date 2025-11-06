@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background: #ecf0f1;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+
+        }
+        .box{
+            flex: 1 1 100%;
+            padding: 20px;
+            text-align: center;
+            background: #3498db;
+            color: white;
+            margin: 10px;
+        }
+        /* 테블릿 이상 */
+        @media(min-width: 768px){
+            .box{
+                flex: 1 1 45%;
+            }
+        }
+
+        /* 데스크탑 이상 */
+        @media(min-width : 1200px){
+            .box{
+                flex: 1 1 30%;
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">박스1</div>
+        <div class="box">박스2</div>
+        <div class="box">박스3</div>
+    </div>
+    
+    <!-- /* figure
+    이미지 다이어그램 코드블록 등 본문 내용과 관련 있지만 독립적으로 존재할 수  있는  콘텐츠를 묶을때
+    */ -->
+    <figure>
+        <img>
+        <figcaption>안에 포함된 콘텐츠의 설명이나 제목을 나타냄</figcaption>
+    </figure>
+
+    
+</body>
+</html>

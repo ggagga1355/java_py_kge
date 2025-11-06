@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div[class]{
+            color: red;
+        }
+
+        [class="p2"]{
+            color: blue;
+        }
+
+   </style>
+
+
+</head>
+<body>
+    <p class="p1">속성선택자 실습용</p>
+    <p id="p3">속성선택자 실습용</p>  
+    <p class="p2">속성선택자 실습용</p>
+    <div class="d1">속성선택자 실습용</div>
+    
+    <script>
+        const p = document.querySelector("p[class'p3']")   
+        let btn = document.querySelector("div[class="d1"]")
+        
+        bin.addEventlistener("click",function()
+            p.style.color="green")
+        </script>
+</body>
+</html>
