@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //학생의 이름, 나이, 전공을 속성으로 가지는 student 객체를 만들고 콘솔에 각 값을 출력
+        const student ={
+            name: "홍길동",
+            age: 25,
+            major: "소프트웨어"
+        }
+        console.log(`이름 : ${student.name}, 나이 : ${student.age}, 전공 : ${student.major}`);
+
+        const car = {brand: "hyundai", model: "Sonata"};
+        //1.year 속성을 추가하여 값 2024 저장
+        //2. model 속성을 'Avante'로 수정하기
+        car.year = 2024;
+        car.model = "Avante";
+
+        const scores = { kor:85, eng :90, math :78};
+        //for - in을 사용하여 과목명과 점수를 다음 형식으로 출력
+        //kor:85
+        //eng:90
+        //math:78
+        for(k in scores){
+            console.log(`${k}:${scores[k]}`);
+        }
+        for(eng in scores){
+            console.log(`eng:${scores.eng}`);
+        }
+        for(math in scores){
+            console.log(`math:${scores.math}`);
+        }
+
+
+        const users = [
+            {name:'kim',age:20},
+            {name:'lee',age:25},
+            {name:'park',age:30},
+        ]
+        //모든 사용자의 이름만출력, 나이가 25세이상만 출력 모든 사용자의 평균나이
+        
+        console.log(users[0],name);
+
+        for(let i = 0; i < scores.length; i++){
+            console.log(users[0],name);
+        }
+        console.log('---------------------');
+        
+        for(const v of users){
+            console.log(v.name);
+        }
+        console.log('---------------------');
+
+        users.forEach(x => console.log(x.name));
+
+        console.log('---------------------');
+
+        for(const v of users){
+            if(v.age >= 25){
+                console.log(v);
+            }
+        }
+
+        console.log(users.filter(x => x.age >= 25));
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
