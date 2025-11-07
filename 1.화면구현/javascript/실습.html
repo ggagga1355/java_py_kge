@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let ball = 25;
+        let box = 4;
+        if(ball % box === 0){
+            console.log(`필요한 박스 : ${ball/box}개`);
+
+        } else {
+            console.log(`필요한 박스 : ${parseInt((ball/box)+1)}개`);
+        }
+        
+        console.log('\n');
+        let age = 15;
+        let ti = 12000;
+        if(age <= 19){
+            console.log(`${ti-(ti*0.2)}`);
+        } else {
+            console.log(`${ti}`)
+        }
+        console.log('\n');
+
+        let price = 28000;
+        let vip = false;        
+        if(price <= 30000 || vip===true){
+            console.log("free");
+        } else {
+            console.log("r");
+        }
+        console.log('\n');
+        let c = 20;
+        if(c >= 28){
+            console.log("에어컨 작동");
+        } else if(c <= 18){
+            console.log("난방 작동");
+        } else{
+            console.log("대기 상태");
+        }
+        console.log('\n');
+        let month = 2;
+        switch(month){
+         case 2 :
+            console.log(`${month}월은 28일 또는 29일까지 있습니다.`);
+            break;
+            default: console.log("");   
+        }
+        console.log('\n');
+        let score = 85;
+        if(score <= 0){
+            console.log("유효하지 않은 점수입니다.");
+        } else if(score >= 90){
+            console.log("A");
+        } else if(score >= 80){
+            console.log("B");
+        } else {
+            console.log("F");
+        }
+        console.log('\n');
+        let year = 2024;
+        if(year % 4 === 0 || year !== 0 && year % 400 === 0){
+            console.log("윤년입니다.");
+        } else {
+            console.log("평년입니다.");
+        }
+        console.log('\n');
+        let hour = 1;
+        if(hour >= 25){
+            console.log("유효하지 않은 시각입니다.");
+        } else if(hour <= 11){
+            console.log("좋은 아침입니다.");
+        } else if(hour <= 17){
+            console.log("좋은 오후입니다.");
+        } else if(hour <= 21){
+            console.log("좋은 저녁입니다.");
+        } else {
+            console.log("좋은 밤입니다.")
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

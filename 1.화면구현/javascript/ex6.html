@@ -19,13 +19,17 @@
                 return x * y;
             },
             div(x,y){
-                return x / y;
+                if(y!==0){
+                    return x / y;
+                } else {
+                    return "0으로 나눌 수 없습니다.";
+                }                
             }
         };
         console.log(`덧셈 결과: ${calculator.add(5,3)}`);
         console.log(`뺄셈 결과: ${calculator.sub(5,3)}`);
         console.log(`곱셈 결과: ${calculator.mul(5,3)}`);
-        console.log(`나눗셈 결과: ${calculator.div(5,3)}`);
+        console.log(`나눗셈 결과: ${calculator.div(5,0)}`);
         
 
 //----------------------------------------------------
@@ -33,20 +37,28 @@
         //프로퍼티
         //name
         //scores -> 빈배열이 들어감
-        let score = [100,98,58,71,26,50,39,45];
-        const total = score.reduce((sum,v) => sum+v,0);
-        console.log(total/score.length);
-
-
-        const student = {
+        let student = {
             name: "홍길동",
             scores: [],
-            avg(){
-                
+            addScore(score){
+                this.scores.push(score);
+            },
+            getAverage(){
+                const total = this.scores.reduce((acc,cur) => acc+ cur,0);
+                return (total/this.scores.length);
             },           
-        };
+            printInfo(){
+                console.log(`학생 이름 : ${this.name}`);
+                console.log(`평균 점수 : ${this.getAverage()}`);
+            }
+        }
         
-        console.log(`${student.add(50,78)}`);
+        student.addScore(90);
+        student.addScore(80);
+        student.addScore(70);
+        student.printInfo();
+       
+        
         //기능
         //점수 추가하는 기능
         //평균 구하여 반환하는 기능
@@ -55,15 +67,40 @@
         //상품을 담고 총합을 계산하는 cart 객체 작성
         //프로퍼티
         //item-> 빈배열
-
-
-
+        let cart ={            
+            items:[],
+            addItem(name,price){
+                this.items.push({name, price});
+            },
+            totalPrice(){
+                let total = 0;
+                for(let item of this.items){
+                    total += item.price;
+                }
+                return total;
+            },
+            showItems(){
+                console.log("담긴 상품");
+                this.items.forEach(item => {
+                    console.log(`${item.name} - ${item.price}원`)
+                });
+                console.log(`총합 : ${this.totalPrice()}`);
+            }
+        }
+        cart.addItem("빵",1000);
+        cart.addItem("사과",9000);
+        cart.addItem("딸기",5000);        
+        cart.showItems();
+        
         //기능
         //상품 추가하기(이름, 가격)
 
         //총 가격을 계산하여 반환하기
 
         //담긴 상품 목록(이름-가격) 출력하고 총가격 출력
+        console.log('---------------------');
+
+        
 
 
 
