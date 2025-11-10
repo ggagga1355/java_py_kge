@@ -1,0 +1,105 @@
+객체
+배열에는 인덱스가 있지만, 객체에는 인덱스가 없다.
+let obj = {
+ key : value, ->ㅍ
+ key : value,        
+}
+
+객체의 value는 key를 통해 접근
+console.log(변수명.key) ->콘솔에 value가 출력
+
+메서드
+객체 안에 정의된 함수
+let obj = {
+ key : value, ->ㅍ
+ key : value,        
+ key : function(매개변수){ 기본모양
+	명령작성 
+ }
+key : (매개변수){ 축약형
+	명령작성 
+ }
+}
+
+메서드의 호출
+*메서드는 항상 객체를 통해서 호출해야 한다.
+변수명.메서드명(인수)
+
+매개변수
+메서드를 호출할 때 전달하는 값(인수)을 함수 내부로 전달해주는 변수
+
+return 값;-> 메서드 안에서 모든 명령을 수행하고 값을 돌려받는다.
+console.log(값) -> 메서드 내부에서 출력하고 끝
+
+함수 (function)
+독립적으로 호출이 가능하다.
+Number()
+String
+bool()
+function 함수명 (매개변수) { 명령문};
+함수명(),
+
+let 변수명 = function(매개변수) { 명령문};
+변수명(),
+
+let 변수명 = (매개변수) => {명령문};
+
+변수명();
+
+함수도 매개변수의 인수로 전달하는 것이 가능하다.
+
+let arr  = [1,2,3,4,5]
+		    
+let newArr = arr.filter( x=>
+매개변수가 1개면 소괄호 생략 가능
+명령문 부분에서 {}와 return을 함께 생략 가능
+
+JS로 HTML을 조종하는 방법
+1.조종하기 위해 선택을 해야한다.
+let tag = document.getElementByid("아이디값"),
+let tag = document.querySelector("CSS선택자"),
+HTML에 작성된 태그에 대한 정보가 JS의 변수에 대입이 된다.
+
+ get:값을 가져오다 set:값을 설정 has:검사
+hasAttribute(속성) : 해당 속성을 가지고 있는지 검사
+getAttribute(속성) : 해당 속성의 값을 반환
+setAttribute(속성명, 값) : 속성과 속성값을 설정한다.
+removeAttribute(속성) : 속성을 제거한다.
+.attributes : 속성들을 모아서 배열로 반환
+ㄴ 태그에서 속성이 많은 경우 배열에 저장해서 인덱스로 관리하면 편하다.
+
+2.스타일 변경하기
+element.style.스타일 속성 = '값';
+스타일 속성은 camel expression으로 쓴다.
+
+element.style.backgroundColor='값';
+element.style.width='값';
+
+element.style.setProperty('속성','값'); 속성을 설정
+element.style.removeProperty('속성'); 속성을 삭제
+
+스타일을 줄 때 clss를 이용해서 비슷한 스타일을 가지고 있는 태그들을 묶어서 사용
+스타일이 많아지게 되면 js로 하나씩 변경하는 대신 classList를 이용
+.active{
+  background-color : pink;
+  transform : scale(1,2);
+}
+
+element.classList.add("active");
+
+setAttribute('속성명','속성값')->기존클래스가 있으면 덮어쓰기
+div class="card"></div>
+
+el.setAttribute("class","active")
+<div class="active")></div> ->원래 있던 card가 사라진다.
+
+el.classList.add('active','hight', 'scale');,
+<div class="card active hight scale active)></div> ->다른 클래스가 추가됨.
+
+classList.remove("클") -> 삭제
+classList.toggle("클래스명"), ->있으면 삭제, 없으면 추가
+contains포함여부
+
+스타일 개수가 적으면 직접
+
+
