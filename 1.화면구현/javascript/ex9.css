@@ -1,0 +1,11 @@
+.card{
+    border: 1px solid black;
+    margin: 5px;
+}
+.num{
+    display: flex;
+}
+ul{
+    display: flex;
+    list-style: none;
+}

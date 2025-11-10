@@ -12,16 +12,22 @@
     <button id="btnCount">증가시키기</button>
     <p id="result">0</p>
 
-    <script>
-        let b1 = document.querySelector("#result");
-        function count(event){
-            switch (event.btnCount){
-                case btnCount:                    
-                    result++;
-                    break; 
-            }
-        }
-        b1.addEventListener("click",count)
+    <script> 
+        let btn = document.querySelector("#btnCount");
+        //이벤트의 처리를 당하는 대상
+        let counter = document.querySelector("#result");
+        let count = 0;
+        //이벤트가 일어났을 때
+        btn.addEventListener("click", () => {
+            counter.innerText = count++;
+        });
+        //화살표 함수 : function키워드도 없고, 함수 이름도 없다
+        //함수를 하나의 식처럼 만들어서 변수에 저장하고 사용
+        function btn_listener(){
+            counter.innerText = count++;
+        }    
+        
+        btn.addEventListener("click",btn_counter);
 
     </script>
 
