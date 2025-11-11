@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <h1>간단 CRUD 게시판</h1>
+
+        <form id="postForm" class="card">
+            <input type="hidden" id="postid" value="">
+            <input id="title" type="text" placeholder="제목" required>
+            <textarea id="body" placeholder="내용" required></textarea>
+            <div class="row">
+                <button id="submitBtn">작성</button>
+                <button id="cancelBtn" class="muted hidden" style="display: none;">취소</button>
+                <button id="refresh" class="muted">새로고침</button>
+            </div>
+            <p class="note">※ jsonplaceholder는 테스트용 API여서 변경이 영구 저장되지 않을 수 있다</p>
+    </form>
+
+    <!-- 목록 -->
+    <section class="card">
+      <div class="row between">
+        <strong>게시글 목록</strong>
+        <div>
+          <button id="refreshBtn" class="muted">새로고침</button>
+        </div>
+      </div>
+
+      <ul id="posts" class="list"></ul>
+
+      <div class="row">
+        <button id="loadMoreBtn" class="muted">더보기</button>
+        <div id="listLoader" class="loader hidden"></div>
+      </div>
+    </section>
+  </main>
+
+<script src="app.js"></script>
+</body>
+</html>
