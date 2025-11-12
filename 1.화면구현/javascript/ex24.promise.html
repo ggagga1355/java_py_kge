@@ -32,7 +32,7 @@
                         reject("데이터 가져오기 실패")
                     }
                 },1500);//1.5초 뒤 결과를 반환
-        })
+            })
 
         //promise의 사용 (.then / .catch)
         myPromise
@@ -42,8 +42,19 @@
             .catch((message) => {
                 console.log(message);
             })
-    });
-        
+        });
+
+        function success(){
+            return new Promise(resolve =>{
+                console.log("실행 중");
+                setTimeout(() => resolve("실행완료!"),2000);
+            });
+        }
+
+        //실행
+        success().then(result =>{
+            console.log(result);
+        })
 
     </script>
 

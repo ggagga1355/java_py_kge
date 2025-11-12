@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="advice"></p>
+    <button id="btn" onclick="click()">명언</button>
+    
+    <script>
+        //let btn = document.querySelector("#btn");
+        function click(){
+            fetch('https://api.adviceslip.com/advice')
+            .then(res => {
+                if(!res.ok){//요청이 잘 됐으면 참/거짓
+                    throw new Error("에러 발생");
+                }
+                return res.json();//얻어온 결과를 json으로 변환
+            })
+            .then(data => {
+                //p태그에 명언을 추출해서 넣는다.
+                // console.log(data.silp.advice);
+                document.querySelector("#advice").innerText = data.slip.advice;
+            })
+            .catch(err => {
+                console.error('Error',err);
+                alert("명언을 가져오는데 실패")
+            })
+        }
+
+        //btn.addEventListener("click",click());
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+<body>
+    <button id="dogBtn">강아지</button>
+    <img id="dImg" >
+
+    <script>
+        let dogBtn = document.querySelector("#dogBtn");
+        let dImg = document.querySelector("#dImg");
+        
+        async function getImg() {
+            const res = await fetch('https://dog.ceo/api/breeds/image/random');
+            if(!rse.ok) throw new Error(console.log(Error));
+            const data = await res.json();
+            document.images(dImg);
+        }
+
+    </script>
+
+    
+</body>
+</html>
