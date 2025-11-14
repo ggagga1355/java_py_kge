@@ -1,0 +1,77 @@
+body{
+    background: linear-gradient(to right, #eee, #797575);
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+}
+.container{
+    width: 500px;
+    border: 2px solid white;
+    border-radius: 24px;
+    background: white;
+    margin: 50% auto;
+    padding: 20px;    
+}
+h2{
+    text-align: center;
+}
+p{
+    margin-bottom: 5px;
+}
+/* 빈 내용 디스플레이 */
+.title #idDisp{
+    display: none;
+}
+.title #pwDisp{
+    display: none;
+}
+.title #pw_disp{
+    display: none;
+}
+.title #nameDisp{
+    display: none;
+}
+.title #emailDisp{
+    display: none;
+}
+/* 디스플레이 */
+.title{
+    gap: 10px;
+
+}
+
+.id{
+    display: flex;
+    gap: 10px;
+}
+.idBtn{
+    background: black;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+}
+.id #idText{
+    flex-grow : 2;
+}
+.ctt{
+    gap: 10px;
+    display: flex;
+    flex-direction: column;    
+}
+input{
+    padding: 10px;
+}
+.mamberBtn{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.m_btn{
+    width: 500px;
+    height: 45px;
+    border: 0px;
+    border-radius: 5px;
+    color: white;
+    background: rgba(103, 103, 236, 0.836);
+}
