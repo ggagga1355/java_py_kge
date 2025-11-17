@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="ran.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Up&DownGame</h1>
+        <tr>
+            <div class="title">
+                <th>1~50사이의 숫자를 입력하세요</th>
+                <th><input id="startBtn" type="button" value="확인"></th>
+                <th><input id="resetBtn" type="button" value="다시 시작"></th>
+            </div>            
+            <td><input id="data" type="text" placeholder="숫자만 입력하시오."></td>
+        </tr>
+        <tr>            
+            <div id="disp"></div>
+        </tr>
+
+
+    </div>
+
+    <script>
+        let random = Math.floor(Math.random() * 50)+1;//범위지정
+        let disp = document.querySelector("#disp");
+        let startBtn = document.querySelector("#startBtn"); 
+        let resetBtn = document.querySelector("#resetBtn");       
+        
+        let game = () => {
+            let data = Number(document.querySelector("#data").value);         
+            
+            if(data == ""){
+                alert("값을 입력하세요.");
+                return;
+            } else if(data < 1 || data > 50){
+                alert("1~50 사이만 입력하세요.");
+                return;
+            } //입력값 범위 지정
+            
+            let rt = '';
+            if(data > random){
+                rt += `${data} 보다 작습니다. <br>`
+            } else if(data < random){
+                rt += `${data} 보다 큽니다. <br>`
+            } else {
+                rt += `${random} 정답입니다!`
+            }
+            let disp = document.querySelector("#disp")
+            disp.innerHTML = rt;
+        };
+        let reset = () => {
+            random = Math.floor(Math.random() * 50)+1;
+            disp.innerHTML = "리셋됐습니다."
+            document.querySelector("#data").value = ""
+            console.log(random);
+
+        };
+        startBtn.addEventListener("click", game);
+        startBtn.addEventListener("enterKeyDown", game);
+        resetBtn.addEventListener("click", reset);
+
+    </script>
+
+
+    
+</body>
+</html>
