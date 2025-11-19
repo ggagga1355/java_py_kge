@@ -1,0 +1,51 @@
+1요구사항
+꽃과 화분 테이블이 있고, 꽃을 구매할 때 화분도 같이 구매한다
+꽃테이블에는 꽃이름, 꽃색깔, 가격
+화분테이블에는 제품번호, 화분 색깔, 화분모양, 꽃이름
+
+
+
+2.개념모델링
+어떤 테이블을 만들어야하고, 어떤 속성이 들어가야 하는지 작성
+
+꽃 이름 색깔 가격
+화분 제품번호 색깔 모양 꽃이름
+꽃을 구매할 때 화분도 구매해야 한다
+
+테이블명		flower	화분
+---------		------------------------
+속성		이름	제품번호
+속성		색깔	색깔
+		가격	모양
+			꽃이름
+
+
+
+
+3.논리 모델링
+속성들의 타입, 기본키 설정
+
+꽃		화분
+varchar pk	int pk
+char		char
+int		char
+		varchar
+
+4.물리 모델링
+꽃 테이블이랑 화분테이블 만들기
+
+요구사항
+ 쇼핑몰 데이터베이스 구축
+회원정보 - id,pw,이름,주소,이메일,생일
+상품 - 상품번호, 상품명, 가격, 재고
+주문 - 주문번호, 주문일, id, 상품번호
+
+members		product		order
+m_id varchar pk	p_num int	o_num
+m_pw varchar	p_name varchar	o_date date
+m_name varchar	p_price int	o_id
+m_add varchar	p_stock int	o_num
+이메일 varchar uq
+생일 date
+
+
