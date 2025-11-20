@@ -1,0 +1,50 @@
+서브쿼리
+select EMPLOYEE, 
+   TOTAL_AMOUNT,
+   #그 결과에 순위를 매겨서 가장 많이 판매된 사람을 1위로 한다.
+   RANK()OVER(
+      order by TOTAL_AMOUNT desc 
+   )as RANK_NO
+FROM(
+	#먼저 실행을 하고 결과값을 위 셀렉에 준다.
+	# employee 별로 sum(amount)를 구한다
+   select EMPLOYEE, SUM(AMOUNT) as TOTAL_AMOUNT
+   from SALES
+   group by EMPLOYEE
+) as T
+
+#where절에 값으로 들어가거나
+select절에 테이블로 들어간다.
+
+
+
+#join
+select e.first_name, e.last_name, d.dept_name 
+from employees e 
+join dept_emp de on e.emp_no = de.emp_no 
+join departments d on de.dept_no = d.dept_no
+where de.to_date = '9999-01-01';-- 현재를 의미
+
+# left outer join 상품별 총 주문 수량을 계산
+select p.name, ifnull(sum(ol.quantity),0) as quantity_total 
+from product p 
+left join order_list ol on p.id = ol.product_id group by p.name;
+
+#right outer join
+#오른쪽 테이블을 기준으로 전부 출력하는 join
+#join 쪽에 써지는 테이블
+select s.name, e.class_name from student s right join enroll e on s.id = e.student_id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
