@@ -25,7 +25,7 @@ public class For {
 			}			
 		}
 		
-		//1~10총합
+		//1~10사이 총합
 		System.out.print("\n");
 		int sum = 0;
 		for(int i = 1; i <= 10;i++) {
@@ -76,22 +76,23 @@ public class For {
 		
 		int num = 12345;
 		int total2 = 0;
-				
+		// 12345 / 10 = 1234.5
+		
 		while(num > 0) {
-			total2 += num % 10; // 0 + 5 + 4 + 3 + 2 + 1
+			total2 += num % 10; // 0 + 5 + 4 + 3 + 2 + 1 
 			num = num / 10;//1234 123 12 1 0 
 		}
 		System.out.println(total2);
 		
 		//1 + (1+2) + (1+2+3)+(1+2+3+4)+....(1 +...10)
 		int total3 = 0;
-		int r = 0;
+		int result = 0;
 		
 		for(int i = 1; i <= 10; i++) {
 			total3 += i; // 1 + 2 + 3....
-			r += total3; // 1 + (1+2) + (1+2+3)...
+			result += total3; // 1 + (1+2) + (1+2+3)...
 		}
-		System.out.println(r);
+		System.out.println(result);
 		
 		
 	}
