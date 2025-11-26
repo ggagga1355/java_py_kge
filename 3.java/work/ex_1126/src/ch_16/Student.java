@@ -1,0 +1,41 @@
+package ch_16;
+
+public class Student {
+	String name;
+	int kor;
+	int eng;
+	int math;
+	
+	public Student(String name, int kor, int eng, int math) {
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	
+	public int getTotal() {
+		return kor+eng+math;
+	}
+	
+	public double getAverage() {
+		return getTotal()/3.0;
+	}
+	
+	public char getGrade() {
+		double avg = getAverage();
+		
+		if(avg >= 90) {
+			return 'A';
+		} else if(avg >= 80) {
+			return 'B';
+		} else if(avg >= 70) {
+			return 'C';
+		} else if(avg >= 60) {
+			return 'D';
+		} else {
+			return 'F';
+		}
+	}
+	
+	
+}

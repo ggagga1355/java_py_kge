@@ -7,8 +7,8 @@ public class CarMain {
 		//Car myCar = new Car();
 		
 		//생성자를 호출하면서 데이터를 보냄
-		Car c1 = new Car("그랜져","검정",350);
-		
+		Car c1 = new Car("그랜져","검정",350); //생성
+							
 		
 	}
 }
