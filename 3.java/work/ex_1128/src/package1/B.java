@@ -1,0 +1,18 @@
+package package1;
+
+public class B {
+	
+	//접근제한자 : pubilc
+	//반환타입 : void
+	//메서드명 : method	
+	
+	public void method() {
+		//같은 패키지에 있기 때문에 필드, 메서드, 생성자에 접근가능
+		A a = new A();
+		a.field = "value";
+		a.method();
+		
+	}
+	
+	
+}
