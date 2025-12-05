@@ -1,0 +1,44 @@
+Optional
+
+---------------------------------------------------------------------------------
+상품관리 프로젝트
+gruop id : com.korea
+artifact : product
+
+SpringWeb
+devTools
+jpa
+h2
+lombok
+
+controller
+ProductController
+- 요청을 DTO로 받는다.
+- 서비스의 createProduct()를 호출한다
+- 결과로 저장된 상품을 DTO로 반환한다.
+
+service
+ProductService
+- 상품 등록 로직을 작성한다.
+- name이 null 또는 빈 문자열이면 예외 발생
+- price < 0 예외
+- stock <0 예외
+- 검증에 통과하면 Repository를 이용해 저장
+
+persistence
+ProductRepository 인터페이스로 만들어야 한다. 클래스X
+- JpaRepository<> 상속
+- 추가메서드는 필요 없음
+
+ProductEntity
+- int id pk, 자동증가
+- String name
+- int price
+- int stock
+- String description
+
+ProductDTO
+- int id
+- String name
+- int stock
+- String description
