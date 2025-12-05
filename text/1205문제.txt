@@ -1,5 +1,5 @@
 Optional
-
+strategy = GenerationType.AUTO
 ---------------------------------------------------------------------------------
 상품관리 프로젝트
 gruop id : com.korea
